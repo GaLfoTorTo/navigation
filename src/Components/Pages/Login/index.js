@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Image, TouchableOpacity, TextInput, Text } from 'react-native';
 import estilo from '../../estilo/estilo'
 
 const Login = ({navigation}) => {
+
+    const tentativa = () => {
+        if( email == '' || senha == ''){
+            
+        }
+        navigation.replace('Home')
+    }
+
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [mensagem, setMensagem] = useState('');
+
     return (
         <View style={estilo.container}>
             <View style={estilo.loginImagem} >
                 <Image
                     source={require('../../../../assets/images/imgLogin.png')}
+                    style={{width: 300, height: 300}}
                 />
             </View>
             <View style={estilo.inputs}>
@@ -21,11 +34,11 @@ const Login = ({navigation}) => {
                     style={estilo.input}
                 />
                 <TouchableOpacity 
-                    onPress={() => navigation.navigate('Home')}>
+                    onPress={tentativa}>
                         <Text style={estilo.botaoEntrar}>Entrar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}>
+                    onPress={tentativa}>
                     <Text style={estilo.botaoConvidado}>Convidado</Text>
                 </TouchableOpacity>
             </View>

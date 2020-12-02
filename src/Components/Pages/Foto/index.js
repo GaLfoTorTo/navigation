@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import estilo from '../../estilo/estilo';
+import Botoes from '../../Botoes/botoes';
 
 const Foto = ({ navigation }) => {
     return (
@@ -51,7 +52,7 @@ const Foto = ({ navigation }) => {
                 </LinearGradient>
                 <LinearGradient
                     colors={['rgb(200, 0, 0)', 'rgb(0, 0, 200)']}
-                    start={{ x: 0.7, y: 0 }}
+                    start={{ x: 0.3, y: 0 }}
                     style={{
                         borderRadius: 10,
                         padding: 2,
@@ -69,27 +70,12 @@ const Foto = ({ navigation }) => {
                 start={{x: 0.7, y: 0}}
                 style={estilo.cardFoto}
             >
-                <Text style={estilo.cardText}>Apps' Photos stay in this section.</Text>
-                <Text style={estilo.cardText}>Navigate to others pages of the app from the buttons.</Text>
+                <Text style={estilo.textFoto}>Apps' Photos stay in this section.</Text>
+                <Text style={estilo.textFoto}>Navigate to others pages of the app from the buttons.</Text>
             </LinearGradient>
-            <View style={estilo.botoesHome}>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}>
-                    <Text style={estilo.botaoHome}>Home</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Foto')}>
-                    <Text style={estilo.botaoHome} >Foto</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Sobre')}>
-                    <Text style={estilo.botaoHome}>Sobre</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Contato')}>
-                    <Text style={estilo.botaoHome} >Contato</Text>
-                </TouchableOpacity>
-            </View>
+            <Botoes 
+                navigation={navigation}
+            />
         </View>
     )
 }

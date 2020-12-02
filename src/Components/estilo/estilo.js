@@ -15,6 +15,8 @@ const estilo = StyleSheet.create({
     },
     loginImagem: {
         flex: 1,
+        width: 300,
+        height: 300
     },
     inputs: {
         width: '80%',
@@ -60,8 +62,7 @@ const estilo = StyleSheet.create({
     welcomeImg: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
-        
+        alignItems: 'center',
     },
     cardHome: {
         borderRadius: 13,
@@ -111,7 +112,7 @@ const estilo = StyleSheet.create({
         justifyContent: 'space-evenly'
     },
     Foto: {
-        width: 150,
+        width: 125,
         height: 125,
         marginBottom: 2,
         marginTop: 2,
@@ -123,8 +124,15 @@ const estilo = StyleSheet.create({
         borderRadius: 13,
         padding: 10,
         margin: 10,
-        height: 200,
+        height: 120,
         width: 350,        
+    },
+    textFoto: {
+        color: 'white',
+        fontWeight: 'bold',
+        textShadowColor: 'blue',
+        fontSize: 20,
+        textAlign: 'center',
     },
 })
 
