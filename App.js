@@ -2,11 +2,11 @@ import React from 'react';
 import {} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack'
-import Login from './src/Components/Pages/Login/index';
-import Home from './src/Components/Pages/Home';
-import Foto from './src/Components/Pages/Foto';
-import Sobre from './src/Components/Pages/Sobre';
-import Contato from './src/Components/Pages/Contato';
+import Login from './src/Components/Pages/Login/Login';
+import Home from './src/Components/Pages/Home/Home';
+import Foto from './src/Components/Pages/Foto/Foto';
+import Sobre from './src/Components/Pages/Sobre/Sobre';
+import Contato from './src/Components/Pages/Contato/Contato';
 
 const Stack = createStackNavigator();
 

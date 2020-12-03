@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Text, View} from 'react-native';
-import estilo from '../estilo/estilo';
+import estilo from './index';
 
 const Botoes = ({navigation}) => {
     return(

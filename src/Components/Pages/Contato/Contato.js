@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet } from 'react-native';
 
-const Contato = ({Navigation}) => {
+const Contato = ({navigation}) => {
     return(
         <View>
-
+            <Botoes
+                navigation={navigation}
+            />
         </View>
     )   
 }
